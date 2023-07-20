@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePgae>
     formattedDate = DateFormat('d MMMM yyyy').format(currentDate);
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 3), // Duration of two rotations
+      duration: const Duration(seconds: 2), // Duration of two rotations
       vsync: this,
     )..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePgae>
                       ],
                     ),
                   ]),
-              backgroundColor: mainColor.withOpacity(0.3),
+              backgroundColor: mainColor.withOpacity(0.6),
               body: Padding(
                 padding: const EdgeInsets.all(40.0),
                 child: ScaleTransition(

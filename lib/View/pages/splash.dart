@@ -17,14 +17,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  List data = [];
-  List<Weather> weatherList = [];
-
   Future<void> getWeatherData() async {
-    Weather weatherInfo =
-        //  weatherInfo.getCurrentLocationWeather();
-        await Weather()
-          ..getCurrentLocationWeather();
+    Weather weatherInfo = await Weather()
+      ..getCurrentLocationWeather();
 
     Timer(
       Duration(seconds: 6),
