@@ -8,8 +8,8 @@ class CityWeather {
   String error_msg = "";
   bool error = false;
   String cityname = "";
-  double temperature = 0;
-  String weather_description = "clear";
+  double temperature = 5;
+  String weather_description = "put a city name,please";
   Future<void> getCurrentCityWeather(String cityName) async {
     try {
       URL =
@@ -26,7 +26,7 @@ class CityWeather {
     } catch (e) {
       error = true;
       error_msg = "Sorry , we don't have data about this city,try again";
-      icon_url = "http://openweathermap.org/img/w/01n.png";
+      icon_url = "http://openweathermap.org/img/w/09d.png";
     }
   }
 }
